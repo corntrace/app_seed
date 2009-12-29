@@ -1,0 +1,11 @@
+.nav
+  .account.fr
+    - if logged_in?
+      = user.username
+      |
+      = link_to "Logout", logout_path
+    - else
+      = link_to "Login", '/login'
+      |
+      = link_to "Register", '/signup'
+  .clear
